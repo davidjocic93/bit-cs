@@ -18,4 +18,3 @@ if (x < 60) {
 else {
     console.log('A');
 }
-

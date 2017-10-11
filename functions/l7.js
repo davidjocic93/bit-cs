@@ -1,23 +1,23 @@
-function avg (grades) {
+function avgGrade(grades) {
+
+    var avg;
     var sum = 0;
+
     for (var i = 0; i < grades.length; i++) {
         sum += grades[i];
     }
-    var x = sum / grades.length;
-    if (x < 60) {
-        console.log('F');
-    } else if (x < 70) {
-        console.log('D');
-    
-    } else if (x < 80) {
-        console.log('C');
-    } else if (x < 90) {
-        console.log('B');
+    avg = sum / grades.length;
+    if (avg < 60) {
+        return "Average grade is " + avg + ", which is equal to F.";
+    } else if (avg < 70) {
+        return "Average grade is " + avg + ", which is equal to D.";
+    } else if (avg < 80) {
+        return "Average grade is " + avg + ", which is equal to C.";
+    } else if (avg < 90) {
+        return "Average grade is " + avg + ", which is equal to B.";
+    } else {
+        return "Average grade is " + avg + ", which is equal to A.";
     }
-    else {
-        console.log('A');
-    }  return x;
 }
-
-var txtGrade = avg([80, 77, 88, 95, 150]);
-console.log(txtGrade);
+    var output = avgGrade([55, 63, 71, 89, 92]);
+    console.log(output);
