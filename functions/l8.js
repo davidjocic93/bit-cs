@@ -7,7 +7,7 @@ function list (startNum, margin, div1, div2) {
         } else if (startNum % div2 === 0) {
             console.log("Buzz")
         } else {
-            console.log(startNum);
+            console.log(startNum + " is not divisable with " + div1 + " or with " + div2 + ".");
         }
     } return;
 }
