@@ -1,4 +1,4 @@
-var a = 1;
+var a = 8;
 
 switch (a) {
 
