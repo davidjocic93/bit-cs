@@ -5,7 +5,7 @@ function summ(number1, number2, margin) {
     var sum = 0;
 
     if (typeof (number1) !== "number" || typeof (number2) !== "number" || typeof (margin) !== "number") {
-        return "Uneta vrednost nije broj";
+        return "Jedna od unetih vrednosti nije broj";
     } else {
 
         for (var x = 0; x < margin; x++) {
