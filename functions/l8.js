@@ -9,7 +9,7 @@ function list (startNum, margin, div1, div2) {
         } else {
             console.log(startNum);
         }
-    }
+    } return;
 }
 
-list(90, 120, 5, 6);
+list(90, 120, 3, 4);
