@@ -41,3 +41,17 @@ nenad.age = 30;
 
 console.log(david.age);
 console.log(createNewObject("aaa"));
+
+function nova (a, b, c) {
+    return function (a,b,c) {
+        return {
+        name: a,
+        age: b,
+        lastname: c,
+    } 
+    } 
+}
+
+var nova1 = nova();
+
+console.log(nova1("david", 24, "jocic"));
