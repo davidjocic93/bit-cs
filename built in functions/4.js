@@ -1,7 +1,9 @@
-function sortWords (sentence) {
+function alphabetizeWords (sentence) {
 
-    return sentence.split('').sort().join('').trim();
+
+
+    return sentence.split(" ").sort().join(" ");
 
 }
 
-console.log(sortWords("david jocic aaa bbb"));
+console.log(alphabetizeWords("david jocic aaa bbb"));
