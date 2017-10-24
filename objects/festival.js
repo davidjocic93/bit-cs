@@ -13,22 +13,22 @@
     }
 
     var terminator = createMovie("Terminator", 140, "Action");
-    var spiderman = createMovie("Spiderman", 130, "Fantasy");
-    var shutterIsland = createMovie("Shutter Island", 124, "Drama");
-    var rideAlong = createMovie("Ride Along", 145, "Comedy");
+    var spiderman = createMovie("Spiderman", 130, "Action");
+    var inception = createMovie ("inception", 152, "Action")
+    var shutterIsland = createMovie("Shutter Island", 124, "Action");
+    var rideAlong = createMovie("Ride Along", 145, "Action");
 
     var prog = createProgram(new Date());
-    var prog1 = createProgram(new Date());
+
 
     prog.addMovie(terminator);
     prog.addMovie(spiderman);
     prog.addMovie(shutterIsland);
-
-    prog1.addMovie(rideAlong);
+    prog.addMovie(rideAlong);
+    prog.addMovie(inception);
 
     var filmskiSusreti = new Festival("Filmski susreti");
     filmskiSusreti.addProgram(prog);
-    filmskiSusreti.addProgram(prog1);
 
     console.log(filmskiSusreti.getData());
 
@@ -61,9 +61,13 @@ function Program(date) {
     this.lengthOfAllMovies = 0;
 
     this.addMovie = function (movie) {
-        this.listOfMovies.push(movie);
-        this.numOfMoviesInProgram++;
-        this.lengthOfAllMovies += movie.length;
+
+                    this.listOfMovies.push(movie);
+                    this.numOfMoviesInProgram++;
+                    this.lengthOfAllMovies += movie.length;
+            
+        
+    }
     }
 
     this.getData = function () {
@@ -74,7 +78,7 @@ function Program(date) {
         }
         return "Program date: " + this.date + ", Program length: " + this.lengthOfAllMovies + " minutes" +  "\n" + justMovie;
     }
-}
+
 
 function Festival(name) {
     this.name = name;
@@ -100,13 +104,3 @@ function Festival(name) {
     }
 }
 
-    // this.getData = function () {
-    //     var moviesNum = 0;
-
-    //     for (var i = 0; i < this.listOfPrograms.length; i++) {
-    //         var program = this.listOfPrograms[i];
-    //         moviesNum  += program.listOfMovies.length; 
-    //         this.totalNumOfMovies++;
-    //     }
-    //     return this.name + " Numbers of movies:" + " " + this.program.getData();
-    // }
