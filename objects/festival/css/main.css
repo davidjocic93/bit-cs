@@ -1,0 +1,19 @@
+body {
+    text-align: center;
+}
+
+#error {
+    color: red;
+}
+
+#movie-list ul {
+    list-style-type: none;
+}
+
+#date-list ul{
+    list-style-type: none;
+}
+
+#date-error {
+    color: red;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Movie Lists</title>
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+    <h1>Movie list</h1>
+
+    <form>
+
+        <input type="text" id="mTitle" value="" placeholder="title">
+        <br>
+        <input type="number" id="mLength" value="" placeholder="length">
+        <br>
+        <select name="genre-select" id="genre-select" id="genre-select">
+
+            <option value="none"></option>
+            <option value="action">Action</option>
+            <option value="drama">Drama</option>
+
+        </select>
+
+        <div id="error"></div>
+        <input type="button" onclick="createMovie()" value="Create movie">
+        <div id="movie-list"></div>
+        <hr>
+    </form>
+
+    <h1>Program</h1>
+
+    <form>
+        <input type="date" id="programDate" value="" placeholder="date">
+        <br>
+
+        <div id="date-error"></div>
+        <input type="button" onclick="createProgram()" value="Create program">
+        <div id="date-list"></div>
+        <hr>
+
+    </form>
+    
+    <form>
+
+       <div >
+           <select id="program-list">
+               <option value="">Movies</option>
+           </select>
+       </div>
+
+       <div >
+            <select id="program-date-list">
+                <option value="">Programs</option>
+            </select>
+        </div>
+
+
+
+    </form>
+
+    <script src="js/entiteti.js"></script>
+    <script src="js/form.js"></script>
+</body>
+
+</html>
