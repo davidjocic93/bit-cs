@@ -5,28 +5,30 @@
     <meta charset="UTF-8">
 
     <title>Movie Lists</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
 
 </head>
 
-<body>
+<body class="container">
     <h1>Movie list</h1>
 
     <form>
 
-        <input type="text" id="mTitle" value="" placeholder="title">
+        <input type="text" class="form-control" id="mTitle" value="" placeholder="title">
         <br>
-        <input type="number" id="mLength" value="" placeholder="length">
+        <input type="number" class="form-control" id="mLength" value="" placeholder="length">
         <br>
 
-        <select name="genre-select" id="genre-select" id="genre-select">
+        <select name="genre-select" class="custom-select" id="genre-select">
             <option value="none"></option>
             <option value="action">Action</option>
             <option value="drama">Drama</option>
         </select>
 
         <div id="error"></div>
-        <input type="button" onclick="createMovie()" value="Create movie">
+        <input type="button" class="btn btn-primary" onclick="createMovie()" value="Create movie">
         <div id="movie-list"></div>
         <hr>
 
@@ -36,11 +38,11 @@
 
     <form>
 
-        <input type="date" id="programDate" value="" placeholder="date">
+        <input type="date" class="form-control" id="programDate" value="" placeholder="date">
         <br>
 
         <div id="date-error"></div>
-        <input type="button" onclick="createProgram()" value="Create program">
+        <input type="button" class="btn btn-secondary" onclick="createProgram()" value="Create program">
         <div id="date-list"></div>
         <hr>
 
@@ -49,12 +51,12 @@
     <form>
         <h1>Movie to Program</h1>
 
-        <select name="program-list" id="program-list"></select>
+        <select name="program-list" class="custom-select" id="program-list"></select>
         <br>
-        <select name="program-date-list" id="program-date-list"></select>
+        <select name="program-date-list" class="custom-select" id="program-date-list"></select>
         <br>
 
-        <input type="button" value="Add movie to Program" onclick="addMovieToProgram()">
+        <input type="button" class="btn btn-success" value="Add movie to Program" onclick="addMovieToProgram()">
         <br>
 
         <div id="movie-to-program-list"></div>
@@ -65,14 +67,21 @@
     <form>
 
         <h1>Festival info</h1>
-        <input type="button" value="Create Program" onclick="festivalInfo()">
+        <input type="button" class="btn btn-info" value="Create Program" onclick="festivalInfo()">
         <br>
         <div id="festival-info"></div>
 
     </form>
 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
     <script src="js/entiteti.js"></script>
     <script src="js/form.js"></script>
+
 </body>
 
 </html>

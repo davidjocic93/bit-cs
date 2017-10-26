@@ -139,11 +139,11 @@ function festivalInfo () {
 }
 
 function createInfo  () {
-    var festivalInfo = "<p>Festival info </p>";
+    var festivalInfo = "<p>Festival info: </p>";
     for (var i = 0; i < programs.length; i++) {
-        festivalInfo += "<p>" + programs[i].date + "</p>";
+        festivalInfo += "<p> Program date: " + programs[i].date + "</p>";
         for (var j = 0; j < programs[i].listOfMovies.length; j++) {
-            festivalInfo += "<p>" +  + programs[i].listOfMovies[j].getInfo() + "</p>";
+            festivalInfo += "<p> Film: " + programs[i].listOfMovies[j].getInfo() + "</p>";
         }
     }
     return festivalInfo;
