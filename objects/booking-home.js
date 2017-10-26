@@ -84,12 +84,21 @@ function Person (name, surname, dateOfBirth){
     this.dateOfBirth = dateOfBirth;
 }
 
+/**
+ * 
+ * @param {*} person 
+ * @param {*} betAmount 
+ * @param {object} country 
+ */
+
 function Player (person, betAmount, country){
     this.person = person;
     this.betAmount = betAmount;
     this.country = country;
     this.winAmount = this.betAmount * this.country.odds;
 }
+
+
 
 function Adress (country, city, postalCode, street, number){
     this.country = country;
@@ -98,6 +107,11 @@ function Adress (country, city, postalCode, street, number){
     this.street = street;
     this.number = number;
 }
+
+/**
+ * 
+ * @param {object} adress 
+ */
 
 function BettingPlace(adress){
     this.adress = adress;
