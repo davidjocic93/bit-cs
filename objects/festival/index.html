@@ -18,23 +18,24 @@
         <br>
         <input type="number" id="mLength" value="" placeholder="length">
         <br>
-        <select name="genre-select" id="genre-select" id="genre-select">
 
+        <select name="genre-select" id="genre-select" id="genre-select">
             <option value="none"></option>
             <option value="action">Action</option>
             <option value="drama">Drama</option>
-
         </select>
 
         <div id="error"></div>
         <input type="button" onclick="createMovie()" value="Create movie">
         <div id="movie-list"></div>
         <hr>
+
     </form>
 
     <h1>Program</h1>
 
     <form>
+
         <input type="date" id="programDate" value="" placeholder="date">
         <br>
 
@@ -44,22 +45,29 @@
         <hr>
 
     </form>
-    
+
+    <form>
+        <h1>Movie to Program</h1>
+
+        <select name="program-list" id="program-list"></select>
+        <br>
+        <select name="program-date-list" id="program-date-list"></select>
+        <br>
+
+        <input type="button" value="Add movie to Program" onclick="addMovieToProgram()">
+        <br>
+
+        <div id="movie-to-program-list"></div>
+        <hr>
+
+    </form>
+
     <form>
 
-       <div >
-           <select id="program-list">
-               <option value="">Movies</option>
-           </select>
-       </div>
-
-       <div >
-            <select id="program-date-list">
-                <option value="">Programs</option>
-            </select>
-        </div>
-
-
+        <h1>Festival info</h1>
+        <input type="button" value="Create Program" onclick="festivalInfo()">
+        <br>
+        <div id="festival-info"></div>
 
     </form>
 

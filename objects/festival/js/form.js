@@ -10,14 +10,12 @@ function createMovie() {
     var genreOptionElement = genreSelectElement[genreSelectElement.selectedIndex];
     var movieListElement = document.getElementById("movie-list");
     var errorElement = document.getElementById("error");
-    var programOfMoviesElement = document.getElementById("program-list");
-
+    var secondMovieListElement = document.getElementById("program-list");
 
     //Get needed values
     var title = titleElement.value;
     var length = lengthElement.value;
     var genre = genreOptionElement.value;
-
 
     //Validate form
     var isInvalidForm = !title || !length || (genre === "none");
@@ -36,17 +34,17 @@ function createMovie() {
     movies.push(movie);
 
     //
-    movieListElement.innerHTML = createListHTML(movies);
-    programOfMoviesElement.innerHTML = createMoviesListHTML(movies);
+    movieListElement.innerHTML = createMovieList();
+    secondMovieListElement.innerHTML = createSecondMovieList();
 
-
+    //Reset values
     titleElement.value = "";
     lengthElement.value = "";
     genreSelectElement.value = "none";
 
 }
 
-function createListHTML(array) {
+function createMovieList() {
 
     //Building our HTML starting with
     // open <ul> tag
@@ -54,9 +52,8 @@ function createListHTML(array) {
 
     // Iterate array and for each element create
     // new <li> element and append to string
-    for (var i = 0; i < array.length; i++) {
-        var film = array[i];
-
+    for (var i = 0; i < movies.length; i++) {
+        var film = movies[i];
         movieListHTML += "<li>" + film.getInfo() + "</li>";
     }
 
@@ -67,33 +64,21 @@ function createListHTML(array) {
     return movieListHTML;
 }
 
-function createMoviesListHTML(array) {
-    
-        //Building our HTML starting with
-        // open <ul> tag
-        var movieListHTML = "";
-    
-        // Iterate array and for each element create
-        // new <li> element and append to string
-        for (var i = 0; i < array.length; i++) {
-            var film = array[i];
-    
-            movieListHTML += "<option>"  + film.getOnlyTitle() + "</option>";
-        }
-
-    
-        //Return formated
-        return movieListHTML;
+function createSecondMovieList() {
+    var secondMovieListHTML = "";
+    for (var i = 0; i < movies.length; i++) {
+        var film = movies[i];
+        secondMovieListHTML += "<option value=\"" + i + "\">" + film.title + "</option>";
     }
-
-
+    return secondMovieListHTML;
+}
 
 function createProgram() {
 
     var dateElement = document.getElementById("programDate");
-    var errorElement = document.getElementById("date-error");
     var dateListElement = document.getElementById("date-list");
     var dateProgramListElement = document.getElementById("program-date-list");
+    var errorElement = document.getElementById("date-error");
 
     var date = dateElement.value;
 
@@ -106,54 +91,60 @@ function createProgram() {
     errorElement.textContent = "";
 
     var program = new Program(date);
-
     programs.push(program);
 
-    dateListElement.innerHTML = createProgramsListHTML(programs);
-
-    dateProgramListElement.innerHTML = createDateProgramListHTML(programs);
-
-
-
-
+    dateListElement.innerHTML = createProgramList();
+    dateProgramListElement.innerHTML = createSecondProgramList();
 }
 
-function createProgramsListHTML(array) {
-
+function createProgramList() {
     var programListHTML = "<ul>";
-
-
-    // Iterate array and for each element create
-    // new <li> element and append to string
-    for (var i = 0; i < array.length; i++) {
-        var program = array[i];
-
+    for (var i = 0; i < programs.length; i++) {
+        var program = programs[i];
         programListHTML += "<li>" + program.getInfo() + "</li>";
     }
-
-    //Finish list by closed </ul>
     programListHTML += "</ul>";
-
-    //Return formated
     return programListHTML;
 }
 
-function createDateProgramListHTML(array) {
-    
-        //Building our HTML starting with
-        // open <ul> tag
-        var movieListHTML = "";
-    
-        // Iterate array and for each element create
-        // new <li> element and append to string
-        for (var i = 0; i < array.length; i++) {
-            var program = array[i];
-    
-            movieListHTML += "<option>"  + program.getInfo() + "</option>";
-        }
-
-    
-        //Return formated
-        return movieListHTML;
+function createSecondProgramList() {
+    var secondProgramListHTML = "";
+    for (var i = 0; i < programs.length; i++) {
+        var program = programs[i];
+        secondProgramListHTML += "<option value=\"" + i + "\">" + program.date + "</option>";
     }
+    return secondProgramListHTML;
+}
 
+function addMovieToProgram () {
+
+    var movieElement = document.getElementById("program-list");
+    var movieSelectElement = movieElement[movieElement.selectedIndex];
+    var programElement = document.getElementById("program-date-list");
+    var programSelectElement = programElement[programElement.selectedIndex];
+    var movieProgramElement = document.getElementById("movie-to-program-list");
+
+    var movieValue = movieSelectElement.value;
+    var programValue = programSelectElement.value;
+
+    programs[programValue].listOfMovies.push(movies[movieValue]);
+    movieProgramElement.textContent = "Film " + movies[movieValue].title.toUpperCase() + " je dodat programu: " + programs[programValue].date;
+
+}
+
+function festivalInfo () {
+    var festivalInfoElement = document.getElementById("festival-info");
+   
+    festivalInfoElement.innerHTML = createInfo();
+}
+
+function createInfo  () {
+    var festivalInfo = "<p>Festival info </p>";
+    for (var i = 0; i < programs.length; i++) {
+        festivalInfo += "<p>" + programs[i].date + "</p>";
+        for (var j = 0; j < programs[i].listOfMovies.length; j++) {
+            festivalInfo += "<p>" +  + programs[i].listOfMovies[j].getInfo() + "</p>";
+        }
+    }
+    return festivalInfo;
+}
