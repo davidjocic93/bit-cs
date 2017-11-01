@@ -18,9 +18,9 @@ function createMovie() {
     var genre = genreOptionElement.value;
 
     //Validate form
-    var isInvalidForm = !title || !length || (genre === "none");
+    var isInvalidForm = !title || !length || length <= 0 || (genre === "none");
     if (isInvalidForm) {
-        errorElement.textContent = "Error";
+        errorElement.textContent = "Please fill all fields properly!";
         return;
     }
 
@@ -31,6 +31,11 @@ function createMovie() {
     var movie = new Movie(title, length, genre);
 
     //Add movie to list movies
+    for (var i = 0; i < movies.length; i++) {
+        var movie = movies[i];
+        
+        
+    }
     movies.push(movie);
 
     //
