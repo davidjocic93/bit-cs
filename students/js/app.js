@@ -145,10 +145,9 @@ var UIController = (function () {
 
         var passedList = document.querySelector(DOMStrings.passedListElement);
         var failedList = document.querySelector(DOMStrings.failedListElement);
-        var gradeElement = document.querySelector(DOMStrings.inputGrade);
         var htmlItem = "<li>" + student.getInfo() + "</li>"
 
-        if (gradeElement.value == 5) {
+        if (student.grade == 5) {
             failedList.insertAdjacentHTML("beforeend", htmlItem);
         } else {
             passedList.insertAdjacentHTML("beforeend", htmlItem);
