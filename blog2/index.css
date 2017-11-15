@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Dancing+Script|Montserrat|Pacifico|Playfair+Display');
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #6A6A6D;
+    background-image: url("backgroundIMG/dark_wood.png");
+    box-shadow: 0px 5px 50px rgb(112, 112, 112);
+    border-bottom: 10px solid rgba(190, 190, 190, 0.4);
+    margin-bottom: 50px;
+}
+
+nav {
+    width: 100%;
+    text-align: center;
+}
+
+ul {
+    color: white;
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+    padding-right: 70px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2em;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: #FCA99B;
+    text-decoration: none;
+}
+ 
+h1 {
+    text-align: center;
+    padding: 35px 0px 35px 0px;
+    color: white;
+    font-size: 3em;
+    font-family: 'Dancing Script', cursive;
+    letter-spacing: 0.1em;
+}
+
+
+body {
+    background-color: #FEF3EF;
+    background-image: url("backgroundIMG/ricepaper_v3.png");
+}
+
+/* .box-border {
+    border: 1px solid rgb(238, 10, 10);
+    margin: 5px;
+    height: 100%;
+    padding: 10px;
+} */
+
+.posts {
+    margin-top: 50px;
+    /*font-family: 'Playfair Display', serif;*/
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+}
+
+
+
+hr {
+    width: 70%;
+    border-color: #FCA99B;
+    margin-top: 50px;
+}
+
+h3 {
+    color: rgb(58, 58, 59);
+    margin-bottom: 30px;
+    background-color: rgba(191, 235, 231, 0.6);
+    padding: 15px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: 5px solid rgb(188, 211, 186);
+    font-family: 'Playfair Display', serif;
+   /* font-family: 'Montserrat', sans-serif; */
+    font-weight: bold;
+    box-shadow: 6px 6px 15px rgb(170, 169, 169);
+}
+
+footer {
+    border-top: 10px solid rgba(190, 190, 190, 0.4);
+    margin-top: 30px;
+    height: 150px;
+    background-color: #6A6A6D;
+    background-image: url("backgroundIMG/dark_wood.png");
+    box-shadow: 0px -5px 30px rgb(128, 128, 128);
+    height: 200px;
+}
+
+.footerPar {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0px;
+}
+
+footer nav {
+    padding-top: 20px;
+}
+
+
+/*OVO JE ZA ABOUT STRANU*/
+
+.about {
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+
+.about h2{
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.about p {
+    font-size: 1.3em;
+    font-family: 'Montserrat', sans-serif;
+    text-indent: 50px;
+}
+
+.about hr {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    width: 50%;
+}
+
+.about:last-child{
+    margin-bottom: 50px;
+}
+
+/*OVO JE ZA AUTHORS STRANU*/
+
+#authorsTitle {
+    color: rgb(65, 64, 64);
+    padding-top: 15px;
+    padding-bottom: 50px;
+    font-family: 'Playfair Display', serif;
+    /*font-family: 'Abril Fatface', cursive;*/
+}
+
+.authors {
+   /* background-color: rgba(191, 235, 231, 0.6);*/
+    border-bottom: 1px solid rgb(250, 190, 181);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    /*background-image: url("backgroundIMG/linedpaper.png");*/
+    height: 100%;
+}
+
+.authors h4 {
+    padding: 10px 0px 20px 10px;
+    text-align: center;
+}
+
+.authors h3 {
+    background-color: rgb(233, 206, 202);
+    border-bottom: 5px solid rgba(255, 185, 174, 0.7);
+} 
+
+.authorsDiv {
+    height: 100%;
+    margin-bottom: 40px;
+}
