@@ -9,13 +9,13 @@ import {Link} from "react-router-dom";
 
 const Header = function(){
     return (
-        <header>
-            <h1>Blog</h1>
+        <header style={{display: "block", paddingBottom: "100px"}}>
+            <h1 style={{position: "absolute", top: "0", left: "0", marginLeft: "100px"}}>Blog</h1>
             <nav>
-                <ul style={{listStyleType: "none"}}>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/authors">Authors</Link></li>
-                    <li><Link to="/about">About</Link></li>
+                <ul style={{listStyleType: "none", position: "absolute", top: "0", right: "0", marginRight: "100px"}}>
+                    <li style={{float: "left", padding: "5px", borderRight: "2px solid black"}}><Link to="/">Home</Link></li>
+                    <li style={{float: "left", padding: "5px", borderRight: "2px solid black"}}><Link to="/authors">Authors</Link></li>
+                    <li style={{float: "left", padding: "5px"}}><Link to="/about">About</Link></li>
                 </ul>
             </nav>
         </header>

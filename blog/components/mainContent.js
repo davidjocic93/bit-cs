@@ -26,6 +26,7 @@ class MainContent extends React.Component {
 
         return (
             <main>
+                <h1 style={{ textAlign: "center", paddingBottom: "30px" }}>POSTS</h1>
                 {this.state.posts.map(post => {
                     return <Post post={post} key={post.id} />;
                 })}
