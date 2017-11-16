@@ -31,18 +31,18 @@ li {
 
 a{
     text-decoration: none;
-    color: white;
+    color: rgb(112, 4, 4);
 }
 
 a:hover {
-    color: #FCA99B;
+    color: rgb(220, 31, 31);
     text-decoration: none;
 }
  
 h1 {
     text-align: center;
     padding: 35px 0px 35px 0px;
-    color: white;
+    color: rgb(2, 1, 1);
     font-size: 3em;
     font-family: 'Dancing Script', cursive;
     letter-spacing: 0.1em;
@@ -50,7 +50,7 @@ h1 {
 
 
 body {
-    background-color: #FEF3EF;
+    background-color: rgb(192, 60, 16);
     background-image: url("backgroundIMG/ricepaper_v3.png");
 }
 
@@ -72,7 +72,7 @@ body {
 
 hr {
     width: 70%;
-    border-color: #FCA99B;
+    border-color: rgb(34, 17, 14);
     margin-top: 50px;
 }
 
@@ -104,7 +104,7 @@ footer {
     font-family: 'Dancing Script', cursive;
     font-size: 1.5em;
     letter-spacing: 0.1em;
-    color: white;
+    color: rgb(169, 14, 14);
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -147,34 +147,3 @@ footer nav {
 
 /*OVO JE ZA AUTHORS STRANU*/
 
-#authorsTitle {
-    color: rgb(65, 64, 64);
-    padding-top: 15px;
-    padding-bottom: 50px;
-    font-family: 'Playfair Display', serif;
-    /*font-family: 'Abril Fatface', cursive;*/
-}
-
-.authors {
-   /* background-color: rgba(191, 235, 231, 0.6);*/
-    border-bottom: 1px solid rgb(250, 190, 181);
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    /*background-image: url("backgroundIMG/linedpaper.png");*/
-    height: 100%;
-}
-
-.authors h4 {
-    padding: 10px 0px 20px 10px;
-    text-align: center;
-}
-
-.authors h3 {
-    background-color: rgb(233, 206, 202);
-    border-bottom: 5px solid rgba(255, 185, 174, 0.7);
-} 
-
-.authorsDiv {
-    height: 100%;
-    margin-bottom: 40px;
-}

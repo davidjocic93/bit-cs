@@ -10,7 +10,7 @@ const Post = (props) => {
     return (
         <div className="col-12 col-md-6 posts">
             <div className="box-border">
-                <h3>{props.title}</h3>
+                <h3>Title {props.id}</h3>
                 <p>{props.body}</p>
                 <hr/>
             </div>
@@ -41,7 +41,7 @@ class Posts extends React.Component{
    
     render(){
         return (
-            this.state.data.map((post) =>  <Link to={`/post/${post.id}`}><Post title={post.title} body={post.body} key={post.id}/></Link> )
+            this.state.data.map((post) =>  <Link to={`/singlepost/${post.id}`}><Post id={post.id} title={post.title} body={post.body} key={post.id}/></Link> )
         );
     }
 

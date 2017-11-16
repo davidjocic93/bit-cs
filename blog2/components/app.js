@@ -4,7 +4,8 @@ import Main from "./main";
 import Authors from "./authors";
 import About from "./about";
 import Footer from "./footer";
-import SinglePost from "./post";
+import SinglePost from "./singlepost";
+import SingleAuthor from "./singleauthor";
 import {Switch, Route} from "react-router-dom";
 
 const App = (props) => {
@@ -16,7 +17,8 @@ const App = (props) => {
                     <Route exact path="/" component={Main}/>
                     <Route path="/authors" component={Authors}/>
                     <Route path="/about" component={About}/>
-                    <Route path="/post/:id" component={SinglePost}/>
+                    <Route path="/singlepost/:id" component={SinglePost}/>
+                    <Route path="/singleauthor/:id" component={SingleAuthor}/>
                 </Switch>
             </div>
             <Footer />

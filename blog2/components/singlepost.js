@@ -1,5 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import {Link} from "react-router-dom";
+
+function goBack() {
+    window.history.back()
+}
 
 
 
@@ -7,7 +12,7 @@ class SinglePost extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {data: {}, data1: {}, data2: []};
+        this.state = {data: {}, data1: {}, data2: [], data2title: []};
     }
 
     componentDidMount () {
@@ -37,20 +42,34 @@ class SinglePost extends React.Component {
                             .then((result) => {
                                 this.setState({data2: result});
                                 console.log(this.state.data2);
-                            });
+                            })
                     });
 
             });  
     }
 
+    
+    goBack() {
+        window.history.back()
+    }
+
     render () {
+
+        
          return (
             <div>
+                <Link to='/'> <p> Back to Home </p></Link>
+                <button onClick={this.goBack}>Back</button>
                 <h1>{this.state.data.title}</h1>
-                <h3>{this.state.data1.name}</h3>
+                <Link to={`/singleauthor/${this.state.data1.id}`}><h3>{this.state.data1.name}</h3></Link>
                 <p>{this.state.data.body}</p>
                 <hr/>
                 <p>{this.state.data2.length} more posts from same author</p>
+                <ul>
+                    {this.state.data2.map((element, index) => {
+                        return <li key={index}> <Link to={`${element.id}`} > Title: {element.id} - {element.title} </Link> </li> 
+                    })}
+                </ul>
             </div>
 
         );

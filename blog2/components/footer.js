@@ -13,6 +13,7 @@ const Footer = (props) => {
                     <li><Link to="/about">About</Link></li>
                 </ul>
             </nav>
+            <p className = "footerPar">***Created by MargieDev***</p>
         </footer>
     );
 };

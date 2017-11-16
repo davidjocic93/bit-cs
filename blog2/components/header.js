@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 const Header = (props) => {
     return (
         <header>
-            <h1>Feminine Blog cause I'm a girl!</h1>
+            <h1>BIT Blog</h1>
             <nav>
                 <ul>
                     <li><Link to="/">Home</Link></li>
