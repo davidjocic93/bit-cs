@@ -29,9 +29,17 @@ li {
     font-size: 1.2em;
 }
 
+
 a{
     text-decoration: none;
-    color: rgb(112, 4, 4);
+    color: rgb(189, 172, 172);
+    display: block;
+    width: 80%;
+}
+
+a.headerLinks {
+    text-decoration: none;
+    color: rgb(189, 172, 172);
 }
 
 a:hover {
@@ -42,7 +50,7 @@ a:hover {
 h1 {
     text-align: center;
     padding: 35px 0px 35px 0px;
-    color: rgb(2, 1, 1);
+    color: rgb(204, 189, 189);
     font-size: 3em;
     font-family: 'Dancing Script', cursive;
     letter-spacing: 0.1em;
@@ -72,23 +80,10 @@ body {
 
 hr {
     width: 70%;
-    border-color: rgb(34, 17, 14);
+    border-color: rgb(177, 163, 160);
     margin-top: 50px;
 }
 
-h3 {
-    color: rgb(58, 58, 59);
-    margin-bottom: 30px;
-    background-color: rgba(191, 235, 231, 0.6);
-    padding: 15px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom: 5px solid rgb(188, 211, 186);
-    font-family: 'Playfair Display', serif;
-   /* font-family: 'Montserrat', sans-serif; */
-    font-weight: bold;
-    box-shadow: 6px 6px 15px rgb(170, 169, 169);
-}
 
 footer {
     border-top: 10px solid rgba(190, 190, 190, 0.4);

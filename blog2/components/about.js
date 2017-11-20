@@ -1,8 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const About = (props) => {
     return (
         <div className="about">
+            <Link to='/'> <p> Back to Home </p></Link>
             <h2>About</h2>
             <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi
                     amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin
@@ -13,7 +15,7 @@ const About = (props) => {
             <p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie
                     turnip leek lentil turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter purslane fennel azuki bean earthnut pea
                     sierra leone bologi leek soko chicory celtuce parsley jícama salsify.
-                </p>
+            </p>
             <hr />
             <h2>Our Story</h2>
             <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi

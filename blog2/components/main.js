@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Data from "./data";
 import PropTypes from "prop-types";
-import {Link} from "react-router-dom";
-
+import { Link } from "react-router-dom";
+import Search from "./search";
 
 
 const Post = (props) => {
@@ -12,22 +12,25 @@ const Post = (props) => {
             <div className="box-border">
                 <h3>Title {props.id}</h3>
                 <p>{props.body}</p>
-                <hr/>
+                <hr />
             </div>
         </div>
     );
 };
 
+const searchHandler = function (dado) {
+    console.log(dado);
+};
 
 
-class Posts extends React.Component{
-    constructor(props){
+class Posts extends React.Component {
+    constructor(props) {
         super(props);
-        this.state = {data: []};
+        this.state = { data: [] };
 
     }
 
-    componentDidMount(){
+    componentDidMount() {
         fetch("https://jsonplaceholder.typicode.com/posts")
             .then((response) => {
                 return response.json();
@@ -38,10 +41,19 @@ class Posts extends React.Component{
                 });
             });
     }
+
+    searchHandler (searchString) {
+        let filtered = this.state.data.filter(post => post.title = this.state.searchString);
+        this.setState ({
+            data: filtered
+        });
+    }
+    
+
+    render() {
    
-    render(){
-        return (
-            this.state.data.map((post) =>  <Link to={`/singlepost/${post.id}`}><Post id={post.id} title={post.title} body={post.body} key={post.id}/></Link> )
+        return  (
+            this.state.data.map((post) => <Link to={`/singlepost/${post.id}`} key={post.id}><Post id={post.id} title={post.title} body={post.body} /></Link>)
         );
     }
 
@@ -49,7 +61,9 @@ class Posts extends React.Component{
 
 const Main = (props) => {
     return (
+        
         <div className="row">
+            <Search onSearchRequest={searchHandler}/> 
             <Posts />
         </div>
     );
@@ -69,4 +83,4 @@ const Main = (props) => {
 // };
 
 
-export default Main;
+export default  Main;
